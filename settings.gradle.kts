@@ -26,3 +26,4 @@ rootProject.name = "hilt-example"
 include(":app")
 include(":kotlin-ksp-library")
 include(":room-example")
+include(":room-example-two")

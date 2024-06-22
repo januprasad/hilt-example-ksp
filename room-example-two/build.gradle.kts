@@ -2,15 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
-    id("kotlin-kapt")
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.github.room_example"
+    namespace = "com.github.room_example_two"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.github.room_example"
+        applicationId = "com.github.room_example_two"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -41,9 +41,6 @@ android {
     buildFeatures {
         compose = true
     }
-//    composeOptions {
-//        kotlinCompilerExtensionVersion = "1.5.1"
-//    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -68,12 +65,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(libs.androidx.runtime.livedata)
-    //ksp
-
-    implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
-    kapt(libs.androidx.room.compiler)
-    // To use Kotlin annotation processing tool (kapt)
-//    ksp(libs.androidx.room.compiler)
 }

@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/kotlin-ksp-library" />
             <option value="$PROJECT_DIR$/room-example" />
+            <option value="$PROJECT_DIR$/room-example-two" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
